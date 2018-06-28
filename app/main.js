@@ -1,5 +1,8 @@
 const inputComponent = {
-  template: `<input class="input is-small" type="text" />`
+  template: `<input
+          :placeholder="placeholder"
+          class="input is-small" type="text" />`,
+  props:['placeholder']
 }
 
 new Vue({
