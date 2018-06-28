@@ -1,10 +1,8 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
   <link rel="stylesheet" href="../public/styles.css" />
   <title>Custom Events</title>
 </head>
@@ -16,17 +14,19 @@
         <div class="column has-text-centered">
           <strong>Notes</strong>
           <div v-for="note in notes" class="notes">
-            {{notes}}
+            {{ note }}
+          </div>
         </div>
         <div class="column has-text-centered">
           <strong>Timestamp</strong>
           <div v-for="timestamp in timestamps" class="timestamps">
-            {{timestamp}}
+            {{ timestamp }}
+          </div>
         </div>
       </div>
-    </div>     
-      <input-component "@add-note :placeholder="placeholder"></input-component>
+      <input-component :placeholder="placeholder"></input-component>
     </div>
+    <note-count-component></note-count-component>
   </div>
 
   <script src="https://unpkg.com/vue"></script>
@@ -34,3 +34,4 @@
 </body>
 
 </html>
+
